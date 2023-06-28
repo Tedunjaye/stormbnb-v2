@@ -14,7 +14,7 @@ const RoomCard = ({ item, selectedCategory }) => {
       {badgeText && <div className="card--badge">{badgeText}</div>}
       <img src={item.photo} className="card--image" />
       <div className="card--stats">
-        <img src="https://www.freepik.com/free-vector/3d-metal-star-isolated_31747695.htm" className="card--star" />
+        <img src="src/s4k6_pdjv_220810-removebg-preview.png" className="card--star" />
         <span>{item.rating}</span>
         <span className="gray">({item.city})</span>
       </div>
