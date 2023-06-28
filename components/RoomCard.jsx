@@ -1,20 +1,26 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Stack, Typography } from '@mui/material';
 
-const RoomCard = ({ room }) => {
-  const { name, description } = room;
+const RoomCard = ({ item, selectedCategory }) => {
+  let badgeText;
+  if (item.superHost === true) {
+    badgeText = 'Super Host';
+  } else {
+    badgeText = 'SOLD Out';
+  }
 
   return (
-    <Card sx={{ mb: 2 }}>
-      <CardContent>
-        <Typography variant="h6" sx={{ mb: 1 }}>
-          {name}
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {description}
-        </Typography>
-      </CardContent>
-    </Card>
+    <Stack className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img src={item.photo} className="card--image" />
+      <div className="card--stats">
+        <img src="src/s4k6_pdjv_220810-removebg-preview.png" className="card--star" />
+        <span>{item.rating}</span>
+        <span className="gray">({item.city})</span>
+      </div>
+      <span className="gray">{item.type} . {item.beds} beds</span>
+      <p className="card-title">{item.title}</p>
+    </Stack>
   );
 };
 

@@ -10,9 +10,11 @@ export default [
     type: 'Entire apartment',
     beds: 2,
     photo:
-      'https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80',
+    'https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80',
+    apartment: 'Rooms'
   },
   {
+    apartment: 'Pools',
     id: 2,
     city: 'Turku',
     country: 'Finland',

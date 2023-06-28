@@ -4,12 +4,14 @@ import Sidebar from './Sidebar';
 import Rooms from './Rooms';
 import axios from 'axios';
 
-const Feed = ({ darkMode, toggleDarkMode }) => {
+const Feed = ({ darkMode, toggleDarkMode, props }) => {
   const [selectedCategory, setSelectedCategory] = useState('Rooms');
   const [rooms, setRooms] = useState([]);
  
 
   useEffect(() => {
+   
+
     const fetchData = async () => {
       const options = {
         method: 'GET',
@@ -56,7 +58,7 @@ const Feed = ({ darkMode, toggleDarkMode }) => {
           {selectedCategory} 
         </Typography>
 
-        <Rooms rooms={rooms} />
+        <Rooms rooms={rooms} selectedCategory={selectedCategory} />
       </Box>
     </Stack>
   );
