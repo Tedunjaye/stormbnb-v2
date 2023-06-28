@@ -20,7 +20,7 @@ function Navbar({ darkMode, toggleDarkMode}) {
     >
       <Box>
         <Link to="/" style={{ display: 'flex', alignItems: 'center' }} className="logo-heading">
-          <img src="https://o.remove.bg/downloads/1739ad32-de3c-4ef1-b568-c9d3a09c3a58/s4k6_pdjv_220810-removebg-preview.png" alt="logo" height={75} className="logo" />
+          <img src="src/Storm_Bnb_Logo-removebg-preview.png" alt="logo" height={75} className="logo" />
           <span className="link-text">stormbnb</span>
         </Link>
       </Box>
